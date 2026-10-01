@@ -3,7 +3,7 @@ package de.maxhenkel.easyvillagers.blocks.tileentity;
 import de.maxhenkel.easyvillagers.blocks.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.Container;
 import net.minecraft.world.MenuProvider;
@@ -12,11 +12,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -47,21 +44,12 @@ public class ResourceFarmTileentity extends BlockEntity implements MenuProvider 
         items.add(new ItemStack(Items.BOOK, 64));
         items.add(new ItemStack(Items.ELYTRA, 1));
         items.add(new ItemStack(Items.EMERALD, 64));
-
-        if (level != null) {
-            var enchantmentRegistry = level.registryAccess().registryOrThrow(Registries.ENCHANTMENT);
-            for (Holder.Reference<Enchantment> enchantmentRef : enchantmentRegistry.holders().toList()) {
-                if (items.size() >= 54) break;
-                Enchantment enchantment = enchantmentRef.value();
-                ItemStack enchantedBook = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(enchantmentRef, enchantment.getMaxLevel()));
-                items.add(enchantedBook);
-            }
-        }
+        items.add(new ItemStack(Items.SHULKER_BOX, 1));
+        items.add(new ItemStack(Items.SHULKER_SHELL, 64));
 
         return new ChestMenu(net.minecraft.world.inventory.MenuType.GENERIC_9x6, id, playerInventory, new CustomReadOnlyContainer(items), 6) {
             @Override
             public ItemStack quickMoveStack(Player playerIn, int index) {
-                // Return empty stack to disable shift-clicking, preventing depletion bug
                 return ItemStack.EMPTY;
             }
         };
@@ -91,7 +79,6 @@ public class ResourceFarmTileentity extends BlockEntity implements MenuProvider 
 
         @Override
         public void setItem(int index, ItemStack stack) {
-            // Read-only logic from player input, except our initialization which overrides it, wait, super.setItem already worked.
         }
 
         @Override
@@ -101,7 +88,6 @@ public class ResourceFarmTileentity extends BlockEntity implements MenuProvider 
 
         @Override
         public void setChanged() {
-            // Do nothing
         }
     }
 }

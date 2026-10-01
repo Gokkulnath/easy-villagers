@@ -24,7 +24,7 @@ public class ResourceFarmBlock extends Block implements EntityBlock {
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             BlockEntity tileEntity = level.getBlockEntity(pos);
             if (tileEntity instanceof ResourceFarmTileentity resourceFarmTileentity) {
                 player.openMenu(resourceFarmTileentity);

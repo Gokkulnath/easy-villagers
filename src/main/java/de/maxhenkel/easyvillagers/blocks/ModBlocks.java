@@ -8,10 +8,10 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModBlocks {
-    public static final DeferredHolder<Block, ResourceFarmBlock> RESOURCE_FARM = BLOCK_REGISTER.registerBlock("resource_farm", ResourceFarmBlock::new, BlockBehaviour.Properties::of);
 
     private static final DeferredRegister.Blocks BLOCK_REGISTER = DeferredRegister.createBlocks(EasyVillagersMod.MODID);
 
+    public static final DeferredHolder<Block, ResourceFarmBlock> RESOURCE_FARM = BLOCK_REGISTER.registerBlock("resource_farm", ResourceFarmBlock::new, BlockBehaviour.Properties::of);
     public static final DeferredHolder<Block, TraderBlock> TRADER = BLOCK_REGISTER.registerBlock("trader", TraderBlock::new, BlockBehaviour.Properties::of);
     public static final DeferredHolder<Block, AutoTraderBlock> AUTO_TRADER = BLOCK_REGISTER.registerBlock("auto_trader", AutoTraderBlock::new, BlockBehaviour.Properties::of);
     public static final DeferredHolder<Block, FarmerBlock> FARMER = BLOCK_REGISTER.registerBlock("farmer", FarmerBlock::new, BlockBehaviour.Properties::of);

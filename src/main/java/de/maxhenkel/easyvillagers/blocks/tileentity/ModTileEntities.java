@@ -13,10 +13,13 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModTileEntities {
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ResourceFarmTileentity>> RESOURCE_FARM = BLOCK_ENTITY_REGISTER.register("resource_farm", () -> BlockEntityType.Builder.of(ResourceFarmTileentity::new, ModBlocks.RESOURCE_FARM.get()).build(null));
+
 
     private static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, EasyVillagersMod.MODID);
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ResourceFarmTileentity>> RESOURCE_FARM = BLOCK_ENTITY_REGISTER.register("resource_farm", () ->
+            new BlockEntityType<>(ResourceFarmTileentity::new, ModBlocks.RESOURCE_FARM.get())
+    );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TraderTileentity>> TRADER = BLOCK_ENTITY_REGISTER.register("trader", () ->
             new BlockEntityType<>(TraderTileentity::new, ModBlocks.TRADER.get())
     );
