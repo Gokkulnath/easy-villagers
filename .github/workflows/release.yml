@@ -1,6 +1,8 @@
 name: Build and Release
 
 on:
+  workflow_dispatch:
+
   push:
     tags:
       - 'v*'
@@ -31,5 +33,6 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: build/libs/*.jar
+        tag_name: ${{ github.ref_name == 'main' && format('dummy-release-{0}', github.run_id) || github.ref_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
