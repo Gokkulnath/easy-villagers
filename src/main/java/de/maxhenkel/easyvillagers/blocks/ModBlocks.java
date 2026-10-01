@@ -19,6 +19,7 @@ public class ModBlocks {
     public static final DeferredHolder<Block, IronFarmBlock> IRON_FARM = BLOCK_REGISTER.registerBlock("iron_farm", IronFarmBlock::new, BlockBehaviour.Properties::of);
     public static final DeferredHolder<Block, IncubatorBlock> INCUBATOR = BLOCK_REGISTER.registerBlock("incubator", IncubatorBlock::new, BlockBehaviour.Properties::of);
     public static final DeferredHolder<Block, InventoryViewerBlock> INVENTORY_VIEWER = BLOCK_REGISTER.registerBlock("inventory_viewer", InventoryViewerBlock::new, BlockBehaviour.Properties::of);
+    public static final DeferredHolder<Block, EnderTraderBlock> ENDER_TRADER = BLOCK_REGISTER.registerBlock("ender_trader", EnderTraderBlock::new, BlockBehaviour.Properties::of);
 
     public static void init(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);

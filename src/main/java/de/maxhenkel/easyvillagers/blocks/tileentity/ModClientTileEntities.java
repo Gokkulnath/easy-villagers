@@ -18,6 +18,7 @@ public class ModClientTileEntities {
         BlockEntityRenderers.register(ModTileEntities.IRON_FARM.get(), c -> new IronFarmRenderer(c.entityModelSet()));
         BlockEntityRenderers.register(ModTileEntities.INCUBATOR.get(), c -> new IncubatorRenderer(c.entityModelSet()));
         BlockEntityRenderers.register(ModTileEntities.INVENTORY_VIEWER.get(), c -> new InventoryViewerRenderer(c.entityModelSet()));
+        BlockEntityRenderers.register(ModTileEntities.ENDER_TRADER.get(), c -> new EnderTraderRenderer(c.entityModelSet()));
     }
 
 }
