@@ -22,6 +22,7 @@ public class ModCreativeTabs {
                     output.accept(new ItemStack(ModItems.VILLAGER.get()));
                     output.accept(VillagerItem.createBabyVillager());
 
+                    output.accept(new ItemStack(ModBlocks.RESOURCE_FARM.get()));
                     output.accept(new ItemStack(ModBlocks.TRADER.get()));
                     output.accept(new ItemStack(ModBlocks.AUTO_TRADER.get()));
                     output.accept(new ItemStack(ModBlocks.FARMER.get()));

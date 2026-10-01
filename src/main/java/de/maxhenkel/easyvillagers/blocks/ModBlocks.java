@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModBlocks {
+    public static final DeferredHolder<Block, ResourceFarmBlock> RESOURCE_FARM = BLOCK_REGISTER.registerBlock("resource_farm", ResourceFarmBlock::new, BlockBehaviour.Properties::of);
 
     private static final DeferredRegister.Blocks BLOCK_REGISTER = DeferredRegister.createBlocks(EasyVillagersMod.MODID);
 

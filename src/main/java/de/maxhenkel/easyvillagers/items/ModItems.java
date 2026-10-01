@@ -16,6 +16,7 @@ public class ModItems {
     private static final DeferredRegister.Items ITEM_REGISTER = DeferredRegister.createItems(EasyVillagersMod.MODID);
 
     public static final DeferredHolder<Item, VillagerItem> VILLAGER = ITEM_REGISTER.registerItem("villager", VillagerItem::new);
+    public static final DeferredHolder<Item, BlockItem> RESOURCE_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.RESOURCE_FARM);
     public static final DeferredHolder<Item, BlockItem> TRADER = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.TRADER);
     public static final DeferredHolder<Item, BlockItem> AUTO_TRADER = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.AUTO_TRADER);
     public static final DeferredHolder<Item, BlockItem> FARMER = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.FARMER);

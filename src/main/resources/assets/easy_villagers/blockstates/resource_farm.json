@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "easy_villagers:block/resource_farm"
+    }
+  }
+}
