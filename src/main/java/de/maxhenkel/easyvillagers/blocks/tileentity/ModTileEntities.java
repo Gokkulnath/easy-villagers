@@ -38,6 +38,9 @@ public class ModTileEntities {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<InventoryViewerTileentity>> INVENTORY_VIEWER = BLOCK_ENTITY_REGISTER.register("inventory_viewer", () ->
             new BlockEntityType<>(InventoryViewerTileentity::new, ModBlocks.INVENTORY_VIEWER.get())
     );
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EnderTraderTileentity>> ENDER_TRADER = BLOCK_ENTITY_REGISTER.register("ender_trader", () ->
+            new BlockEntityType<>(EnderTraderTileentity::new, ModBlocks.ENDER_TRADER.get())
+    );
 
     public static void init(IEventBus eventBus) {
         BLOCK_ENTITY_REGISTER.register(eventBus);
@@ -51,6 +54,7 @@ public class ModTileEntities {
         event.registerBlockEntity(Capabilities.Item.BLOCK, IRON_FARM.get(), (object, context) -> object.getItemHandler());
         event.registerBlockEntity(Capabilities.Item.BLOCK, INCUBATOR.get(), (object, context) -> object.getItemHandler());
         event.registerBlockEntity(Capabilities.Item.BLOCK, INVENTORY_VIEWER.get(), (object, context) -> object.getItemHandler());
+        event.registerBlockEntity(Capabilities.Item.BLOCK, ENDER_TRADER.get(), (object, context) -> object.getItemHandler());
     }
 
 }

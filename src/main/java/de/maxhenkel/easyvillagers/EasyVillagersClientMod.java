@@ -58,6 +58,7 @@ public class EasyVillagersClientMod {
         event.register(Identifier.fromNamespaceAndPath(EasyVillagersMod.MODID, "inventory_viewer"), InventoryViewerSpecialRenderer.Unbaked.MAP_CODEC);
         event.register(Identifier.fromNamespaceAndPath(EasyVillagersMod.MODID, "trader"), TraderSpecialRenderer.Unbaked.MAP_CODEC);
         event.register(Identifier.fromNamespaceAndPath(EasyVillagersMod.MODID, "iron_farm"), IronFarmSpecialRenderer.Unbaked.MAP_CODEC);
+        event.register(Identifier.fromNamespaceAndPath(EasyVillagersMod.MODID, "ender_trader"), de.maxhenkel.easyvillagers.items.render.EnderTraderSpecialRenderer.Unbaked.MAP_CODEC);
 
         event.register(Identifier.fromNamespaceAndPath(EasyVillagersMod.MODID, "villager"), VillagerSpecialRenderer.Unbaked.MAP_CODEC);
     }

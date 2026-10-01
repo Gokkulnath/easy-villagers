@@ -24,6 +24,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> IRON_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.IRON_FARM);
     public static final DeferredHolder<Item, BlockItem> INCUBATOR = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.INCUBATOR);
     public static final DeferredHolder<Item, BlockItem> INVENTORY_VIEWER = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.INVENTORY_VIEWER);
+    public static final DeferredHolder<Item, BlockItem> ENDER_TRADER = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.ENDER_TRADER);
 
     private static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPE_REGISTER = DeferredRegister.create(BuiltInRegistries.DATA_COMPONENT_TYPE, EasyVillagersMod.MODID);
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<VillagerData>> VILLAGER_DATA_COMPONENT = DATA_COMPONENT_TYPE_REGISTER.register("villager", () -> DataComponentType.<VillagerData>builder().cacheEncoding().persistent(VillagerData.CODEC).networkSynchronized(VillagerData.STREAM_CODEC).build());

@@ -19,6 +19,7 @@ public class ServerConfig extends ConfigBase {
     public final ModConfigSpec.IntValue farmSpeed;
     private final ModConfigSpec.ConfigValue<List<? extends String>> farmCropsBlacklistSpec;
     public final ModConfigSpec.IntValue golemSpawnTime;
+    public final ModConfigSpec.IntValue enderTraderSpawnTime;
     public final ModConfigSpec.IntValue traderMinRestockTime;
     public final ModConfigSpec.IntValue traderMaxRestockTime;
     public final ModConfigSpec.IntValue autoTraderMinRestockTime;
@@ -57,6 +58,10 @@ public class ServerConfig extends ConfigBase {
         golemSpawnTime = builder
                 .comment("The time in ticks the iron farm takes to spawn a golem")
                 .defineInRange("iron_farm.spawn_time", 20 * 60 * 4, 20 * 10 + 1, Integer.MAX_VALUE);
+
+        enderTraderSpawnTime = builder
+                .comment("The time in ticks the ender trader takes to spawn items")
+                .defineInRange("ender_trader.spawn_time", 20 * 10, 20, Integer.MAX_VALUE);
 
         traderMinRestockTime = builder
                 .comment("The minimum amount of time in ticks the trader takes to restock")
