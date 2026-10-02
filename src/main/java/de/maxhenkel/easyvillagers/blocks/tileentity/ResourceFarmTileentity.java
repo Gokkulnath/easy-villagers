@@ -49,6 +49,22 @@ public class ResourceFarmTileentity extends BlockEntity implements MenuProvider 
         items.add(new ItemStack(Items.GUNPOWDER, 64));
         items.add(new ItemStack(Items.PAPER, 64));
         items.add(new ItemStack(Items.FIREWORK_ROCKET, 64));
+        items.add(new ItemStack(Items.MAGMA_CREAM, 64));
+        items.add(new ItemStack(Items.SPIDER_EYE, 64));
+        items.add(new ItemStack(Items.ENDER_PEARL, 16));
+        items.add(new ItemStack(Items.BLAZE_ROD, 64));
+        items.add(new ItemStack(Items.WATER_BUCKET, 1));
+        items.add(new ItemStack(Items.LAVA_BUCKET, 1));
+        items.add(new ItemStack(Items.GOLDEN_APPLE, 64));
+        items.add(new ItemStack(Items.STRING, 64));
+        items.add(new ItemStack(Items.COAL, 64));
+        items.add(new ItemStack(Items.REDSTONE_BLOCK, 64));
+        items.add(new ItemStack(Items.NETHER_QUARTZ_ORE, 64));
+        items.add(new ItemStack(Items.HOPPER, 64));
+        items.add(new ItemStack(Items.NETHER_WART, 64));
+        items.add(new ItemStack(Items.EMERALD_BLOCK, 64));
+        items.add(new ItemStack(Items.GLASS, 64));
+        items.add(new ItemStack(Items.LAPIS_BLOCK, 64));
 
         return new ChestMenu(net.minecraft.world.inventory.MenuType.GENERIC_9x6, id, playerInventory, new CustomReadOnlyContainer(items), 6) {
             @Override
