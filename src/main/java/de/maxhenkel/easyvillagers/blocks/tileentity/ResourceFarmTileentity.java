@@ -46,6 +46,9 @@ public class ResourceFarmTileentity extends BlockEntity implements MenuProvider 
         items.add(new ItemStack(Items.EMERALD, 64));
         items.add(new ItemStack(Items.SHULKER_BOX, 1));
         items.add(new ItemStack(Items.SHULKER_SHELL, 64));
+        items.add(new ItemStack(Items.GUNPOWDER, 64));
+        items.add(new ItemStack(Items.PAPER, 64));
+        items.add(new ItemStack(Items.FIREWORK_ROCKET, 64));
 
         return new ChestMenu(net.minecraft.world.inventory.MenuType.GENERIC_9x6, id, playerInventory, new CustomReadOnlyContainer(items), 6) {
             @Override
