@@ -1,6 +1,8 @@
 package de.maxhenkel.easyvillagers.blocks.tileentity;
 
 import de.maxhenkel.easyvillagers.EasyVillagersMod;
+import de.maxhenkel.easyvillagers.blocks.tileentity.ResourceFarmTileentity;
+
 import de.maxhenkel.easyvillagers.blocks.ModBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -12,8 +14,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModTileEntities {
 
+
     private static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, EasyVillagersMod.MODID);
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ResourceFarmTileentity>> RESOURCE_FARM = BLOCK_ENTITY_REGISTER.register("resource_farm", () ->
+            new BlockEntityType<>(ResourceFarmTileentity::new, ModBlocks.RESOURCE_FARM.get())
+    );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TraderTileentity>> TRADER = BLOCK_ENTITY_REGISTER.register("trader", () ->
             new BlockEntityType<>(TraderTileentity::new, ModBlocks.TRADER.get())
     );
